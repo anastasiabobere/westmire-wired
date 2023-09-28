@@ -1,0 +1,93 @@
+$font-family: "TT Norms Pro", sans-serif;
+$font-size-normal: 18px;
+$font-size-big: 36px;
+$font-size-small: 12px;
+$mybg: radial-gradient(
+  ellipse farthest-corner at 100% 100%,
+  #d5d8d6 5%,
+  #a8cbd2 30%,
+  #76d0cf 90%,
+  #afd9d5 100%,
+  #75b2ce 100%
+);
+
+//basic css
+body {
+  font-family: $font-family;
+  margin: 0;
+  padding: 0;
+}
+img {
+  width: 100px;
+  height: 100px;
+}
+.link {
+  text-decoration: none;
+  color: black;
+}
+//making grid layout for front page
+#home-container {
+  background: $mybg;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  padding: 2rem;
+  padding-left: 4rem;
+  box-sizing: border-box;
+  overflow: hidden;
+  #logo {
+    grid-row: 1;
+    grid-column: 1 / span 2;
+    display: flex !important;
+    font-size: $font-size-normal;
+    text-align: center;
+    img {
+      width: 50px;
+      height: 50px;
+      padding-top: 10px;
+    }
+  }
+  #headset-name {
+    grid-row: 2;
+    grid-column: 1 / span 2;
+    font-size: 65px;
+    font-weight: 400;
+  }
+  #home-headphones-image {
+    grid-row: 2 / span 3;
+    grid-column: 3;
+    width: 550px;
+    height: 550px;
+    align-self: center;
+    margin-bottom: 14rem;
+  }
+  #link2 {
+    grid-column: 2;
+    display: flex;
+  }
+  #link1 {
+    grid-column: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+  #link-white {
+    background-color: #ffffff;
+    border-radius: 30px;
+    padding: 20px 40px;
+    font-weight: 600;
+    align-self: center;
+    font-size: $font-size-normal;
+    margin: 1rem 2rem;
+  }
+  #link-grey {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 30px;
+    padding: 20px 40px;
+    font-weight: 400;
+    align-self: center;
+    font-size: $font-size-normal;
+    margin: 1rem 2rem;
+  }
+}

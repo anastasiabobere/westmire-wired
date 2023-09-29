@@ -7,8 +7,26 @@ $mybg: radial-gradient(
   #d5d8d6 5%,
   #a8cbd2 30%,
   #76d0cf 90%,
-  #afd9d5 100%,
+  #76d0cf 90%,
   #75b2ce 100%
+);
+// $bg-reverse: radial-gradient(
+//   ellipse farthest-corner at 100% 100%,
+//   #75b2ce 5%,
+//   #afd9d5 30%,
+//   #76d0cf 70%,
+//   #a8cbd2 100%,
+//   #d5d8d6 100%
+// );
+
+$bg-reverse: radial-gradient(
+  ellipse farthest-corner at 100% 0%,
+  #d5d8d6 10%,
+  #a8cbd2 30%,
+  #76d0cf 90%,
+  #76d0cf 90%,
+  #75b2ce 100% /* Transparent color at the top */
+    /* Your desired background color at the bottom */
 );
 
 //basic css
@@ -16,15 +34,17 @@ body {
   font-family: $font-family;
   margin: 0;
   padding: 0;
+  letter-spacing: 3px;
 }
 img {
   width: 100px;
   height: 100px;
 }
-.link {
+a {
   text-decoration: none;
   color: black;
 }
+//HOME PAGE
 //making grid layout for front page
 #home-container {
   background: $mybg;
@@ -89,5 +109,34 @@ img {
     align-self: center;
     font-size: $font-size-normal;
     margin: 1rem 2rem;
+  }
+}
+//INFO PAGE
+#info {
+  background: $bg-reverse;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  padding: 2rem;
+  padding-left: 4rem;
+  box-sizing: border-box;
+  overflow: hidden;
+  place-items: center;
+  #text {
+    h3 {
+      font-weight: 500;
+      font-size: $font-size-big;
+    }
+    p {
+      font-size: $font-size-normal;
+      line-height: 40px;
+    }
+  }
+  img {
+    width: 450px;
+    height: 550px;
+    border-radius: 5px 75px 5px 5px;
   }
 }

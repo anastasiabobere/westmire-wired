@@ -2,6 +2,7 @@ body {
   font-family: "TT Norms Pro", sans-serif;
   margin: 0;
   padding: 0;
+  letter-spacing: 3px;
 }
 
 img {
@@ -9,13 +10,13 @@ img {
   height: 100px;
 }
 
-.link {
+a {
   text-decoration: none;
   color: black;
 }
 
 #home-container {
-  background: radial-gradient(ellipse farthest-corner at 100% 100%, #d5d8d6 5%, #a8cbd2 30%, #76d0cf 90%, #afd9d5 100%, #75b2ce 100%);
+  background: radial-gradient(ellipse farthest-corner at 100% 100%, #d5d8d6 5%, #a8cbd2 30%, #76d0cf 90%, #76d0cf 90%, #75b2ce 100%);
   width: 100vw;
   height: 100vh;
   display: grid;
@@ -78,4 +79,31 @@ img {
   align-self: center;
   font-size: 18px;
   margin: 1rem 2rem;
+}
+
+#info {
+  background: radial-gradient(ellipse farthest-corner at 100% 0%, #d5d8d6 10%, #a8cbd2 30%, #76d0cf 90%, #76d0cf 90%, #75b2ce 100%);
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  padding: 2rem;
+  padding-left: 4rem;
+  box-sizing: border-box;
+  overflow: hidden;
+  place-items: center;
+}
+#info #text h3 {
+  font-weight: 500;
+  font-size: 36px;
+}
+#info #text p {
+  font-size: 18px;
+  line-height: 40px;
+}
+#info img {
+  width: 450px;
+  height: 550px;
+  border-radius: 5px 75px 5px 5px;
 }/*# sourceMappingURL=style.css.map */

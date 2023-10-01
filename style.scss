@@ -10,14 +10,6 @@ $mybg: radial-gradient(
   #76d0cf 90%,
   #75b2ce 100%
 );
-// $bg-reverse: radial-gradient(
-//   ellipse farthest-corner at 100% 100%,
-//   #75b2ce 5%,
-//   #afd9d5 30%,
-//   #76d0cf 70%,
-//   #a8cbd2 100%,
-//   #d5d8d6 100%
-// );
 
 $bg-reverse: radial-gradient(
   ellipse farthest-corner at 100% 0%,
@@ -48,7 +40,7 @@ a {
 //making grid layout for front page
 #home-container {
   background: $mybg;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -114,7 +106,7 @@ a {
 //INFO PAGE
 #info {
   background: $bg-reverse;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -135,8 +127,156 @@ a {
     }
   }
   img {
-    width: 450px;
+    width: 510px;
     height: 550px;
     border-radius: 5px 75px 5px 5px;
+  }
+}
+
+//CATEGORY PAGE
+#categories-container {
+  background: $mybg;
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  box-sizing: border-box;
+  overflow: hidden;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+
+  .link-grey {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 30px;
+    padding: 20px 40px;
+    font-weight: 600;
+    align-self: center;
+    font-size: $font-size-normal;
+    margin: 1rem 2rem;
+  }
+  #link3 {
+    grid-row: 3;
+    grid-column: 2;
+    justify-content: center;
+    display: flex;
+  }
+  h3 {
+    grid-row: 1;
+    grid-column: 2;
+    font-weight: 500;
+    font-size: $font-size-big;
+  }
+  .category {
+    background-color: #ffffff;
+    width: 280px;
+    height: 330px;
+
+    padding: 50px 10px 0px 10px;
+    justify-self: center;
+    border-radius: 5px 75px 5px 75px;
+    img {
+      width: 90%;
+      height: 170px;
+      border-radius: 5px 35px 5px 5px;
+    }
+    p {
+      font-size: $font-size-small;
+      font-weight: 300;
+    }
+    h4 {
+      font-size: $font-size-normal;
+    }
+  }
+  .cat-1 {
+    grid-row: 2;
+    grid-column: 1;
+  }
+  .cat-2 {
+    grid-row: 2;
+    grid-column: 2;
+  }
+  .cat-3 {
+    grid-row: 2;
+    grid-column: 3;
+  }
+}
+#support {
+  background: $bg-reverse;
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  padding: 2rem;
+  padding-left: 4rem;
+  box-sizing: border-box;
+  overflow: hidden;
+  place-items: center;
+  #text2 {
+    grid-row: 1;
+    grid-column: 2;
+    width: 100%;
+    h3 {
+      font-weight: 500;
+      font-size: $font-size-big;
+    }
+    p {
+      font-size: $font-size-normal;
+      line-height: 40px;
+    }
+  }
+  img {
+    grid-row: 1 / span 2;
+    grid-column: 1;
+    width: 510px;
+    height: 550px;
+    border-radius: 5px 75px 5px 5px;
+  }
+  #locations {
+    grid-row: 2;
+    grid-column: 2;
+    width: 100%;
+    margin-bottom: 2rem;
+    h4 {
+      font-size: $font-size-normal;
+      font-weight: 600;
+    }
+    p {
+      font-size: $font-size-small;
+      line-height: 30px;
+    }
+  }
+}
+
+#connect {
+  background: $mybg;
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  box-sizing: border-box;
+  overflow: hidden;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  h3 {
+    font-weight: 500;
+    font-size: $font-size-big;
+  }
+  h4 {
+    text-transform: uppercase;
+    font-size: $font-size-normal;
+    font-weight: 600;
+  }
+  .email {
+    grid-column: 3;
+    font-weight: 600;
+    align-self: start;
+  }
+  a:hover {
+    text-decoration: underline;
   }
 }

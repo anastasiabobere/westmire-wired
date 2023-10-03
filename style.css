@@ -308,6 +308,7 @@ a:hover {
   background-color: #ffffff;
   width: 280px;
   height: 330px;
+  margin-top: 80px;
   padding: 50px 10px 0px 10px;
   justify-self: center;
   border-radius: 5px 75px 5px 75px;
@@ -336,42 +337,28 @@ a:hover {
   grid-row: 2;
   grid-column: 2;
 }
-#products .container .search-flex {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 10px;
-}
-#products .container .search-flex input {
+#products .container input {
   border: none;
   width: 100%;
-  height: 50px;
+  height: 30px;
   padding: 10px;
   margin-right: 10px;
+  margin-bottom: 20px;
   border: 1px solid #fff;
   border-radius: 5px;
   background: transparent;
   color: #fff;
 }
 
-#search-results {
+#product-details {
   background: radial-gradient(ellipse farthest-corner at 100% 100%, #d5d8d6 5%, #a8cbd2 30%, #76d0cf 90%, #76d0cf 90%, #75b2ce 100%);
   width: 100%;
   height: 100vh;
-}
-
-.btn {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  border: 1px solid rgb(241, 241, 241);
-  border-radius: 5px;
-  color: #969696;
-  cursor: pointer;
-  background-color: #ffffff;
-}
-
-.btn:hover {
-  text-decoration: underline;
-  background-color: #d5d8d6;
-  border: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  padding: 2rem;
+  padding-left: 4rem;
+  box-sizing: border-box;
+  overflow: hidden;
 }/*# sourceMappingURL=style.css.map */
